@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    overflow-x: hidden;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    margin-top: 20px;
+  }
+  
+  .piano {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 90%;
+  }
+  
+  .key {
+    width: 120px;
+    height: 320px;
+    background: linear-gradient(to bottom, #fff, #ddd);
+    border: 3px solid #222;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+  }
+  
+  .key:hover {
+    background: #ffeb3b;
+    transform: scale(1.05);
+  }
+  
+  .key small {
+    font-size: 1rem;
+    color: #666;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .note-trail {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, 0);
+  }
+  
+  #score {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  #playSeq {
+    display: block;
+    margin: 30px auto;
+    padding: 16px 32px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background-color: #00bcd4;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  #playSeq:hover {
+    transform: scale(1.1);
+    background-color: #0097a7;
+  }
+  
+  /* Responsive Piano */
+  @media (max-width: 768px) {
+    .key {
+      width: 80px;
+      height: 240px;
+      font-size: 1.6rem;
+    }
+  
+    #score {
+      font-size: 2rem;
+    }
+  
+    #playSeq {
+      font-size: 1.2rem;
+    }
+  }
+  

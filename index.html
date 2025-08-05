@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hindi Swara Piano Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>🎵 Sargam Music Game 🎶</h1>
+  
+  <div class="piano">
+    <div class="key" data-note="sa">सा</div>
+    <div class="key" data-note="re">रे</div>
+    <div class="key" data-note="ga">गा</div>
+    <div class="key" data-note="ma">मा</div>
+    <div class="key" data-note="pa">पा</div>
+    <div class="key" data-note="dha">धा</div>
+    <div class="key" data-note="ni">नि</div>
+    <div class="key" data-note="sa_high">सा'</div>
+  </div>
+
+  <button id="playSeq">🎶 Play Sequence</button>
+  <div id="score"></div>
+
+  <!-- Audio clips -->
+  <audio id="sa" src="sounds/sa.mp3"></audio>
+  <audio id="re" src="sounds/re.mp3"></audio>
+  <audio id="ga" src="sounds/ga.mp3"></audio>
+  <audio id="ma" src="sounds/ma.mp3"></audio>
+  <audio id="pa" src="sounds/pa.mp3"></audio>
+  <audio id="dha" src="sounds/dha.mp3"></audio>
+  <audio id="ni" src="sounds/ni.mp3"></audio>
+  <audio id="sa_high" src="sounds/sa_high.mp3"></audio>
+
+</body>
+</html>
